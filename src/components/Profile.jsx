@@ -46,9 +46,10 @@ const Stats = styled.ul`
   list-style: none;
   padding: 0;
   display: flex;
+  gap: 30px;
   justify-content: space-between;
   align-items: flex-end;
-  width: 100%;
+  /* width: 100%; */
   margin-top: 15px;
 `;
 
@@ -60,6 +61,7 @@ const StatsItem = styled.li`
   position: relative;
   flex-direction: column;
   flex-wrap: nowrap;
+  width: 80px;
 `;
 
 const Label = styled.span`
@@ -85,15 +87,15 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
 
       <Stats>
         <StatsItem>
-          <Label>Followers: </Label>
+          <Label>Followers</Label>
           <Quantity>{stats.followers}</Quantity>
         </StatsItem>
         <StatsItem>
-          <Label>Views: </Label>
+          <Label>Views</Label>
           <Quantity>{stats.views}</Quantity>
         </StatsItem>
         <StatsItem>
-          <Label>Likes: </Label>
+          <Label>Likes</Label>
           <Quantity>{stats.likes}</Quantity>
         </StatsItem>
       </Stats>
